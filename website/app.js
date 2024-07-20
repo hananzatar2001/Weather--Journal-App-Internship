@@ -54,9 +54,11 @@ const updateUI = async () => {
   const request = await fetch('/all');
   try {
     const allData = await request.json();
-    document.getElementById('temp').innerHTML = Math.round(allData.temp) + ' degrees';
-    document.getElementById('content').innerHTML = allData.feel;
-    document.getElementById('date').innerHTML = allData.date;
+    // Convert Fahrenheit to Celsius
+    const tempCelsius = (allData.temp - 32) * 5 / 9;
+    document.getElementById('temp').innerHTML = 'Temperature: ' + Math.round(tempCelsius) + '°C';
+    document.getElementById('content').innerHTML = 'Feelings: ' + allData.feel;
+    document.getElementById('date').innerHTML = 'Date: ' + allData.date;
   } catch (error) {
     console.log('error', error);
   }
