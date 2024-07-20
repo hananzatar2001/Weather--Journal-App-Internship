@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="holder">
+        <header>
+            <h1>Weather Journal</h1>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <label for="location">Select Location:</label>
+                    <select id="location">
+                        <option value="90210,us">90210, US</option>
+                        <option value="10001,us">10001, US</option>
+                        <option value="WC2N,gb">WC2N, GB</option>
+                        <option value="110001,in">110001, IN</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div>
+                    <label for="feelings">How are you feeling today?</label>
+                    <textarea id="feelings" placeholder="Enter your feelings here"></textarea>
+                </div>
+                <button id="generate">Generate</button>
+            </section>
+            <section class="entryHolder" id="entryHolder">
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="content"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
