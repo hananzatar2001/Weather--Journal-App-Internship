@@ -17,7 +17,7 @@ The Weather Journal Project is a web application that allows users to record the
 ## Outputs
 - Date: 7.20.2024
 - Temperature: 31°C
-- Feelings: happy
+- Feelings:  I feel happy
 
 ## Author
 Hanan Zatar
